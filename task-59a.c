@@ -10,7 +10,7 @@ count_regs(char *str, int len)
     cnt_lowers = cnt_uppers = 0;
     for (int i = 0; i < len; ++i) if (str[i] == tolower(str[i])) cnt_lowers++;
     for (int j = 0; j < len; ++j) if (str[j] == toupper(str[j])) cnt_uppers++;
-    return (cnt_lowers > cnt_uppers) ? 1 : 0;
+    return (cnt_lowers >= cnt_uppers) ? 1 : 0;
 }
 
 int 
